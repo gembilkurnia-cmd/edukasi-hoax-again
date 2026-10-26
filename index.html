@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detektif Hoax — Media Belajar Mengenali Hoax</title>
+  <meta name="description" content="Media pembelajaran interaktif untuk mengenali berbagai jenis hoax: bedah pesan, pemindai ciri hoax, permainan detektif, dan kuis.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="lewati" href="#konten">Lewati ke konten</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGASI ===== -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="#beranda" aria-label="Detektif Hoax, ke beranda">
+        <span class="logo-ikon" aria-hidden="true">🔎</span><span>Detektif<b>Hoax</b></span>
+      </a>
+      <nav id="menu" class="menu" aria-label="Navigasi utama">
+        <a href="#apa">Apa itu Hoax</a>
+        <a href="#jenis">Jenis Hoax</a>
+        <a href="#bedah">Bedah Pesan</a>
+        <a href="#pemindai">Pemindai</a>
+        <a href="#langkah">Cara Cek</a>
+        <a href="#detektif">Permainan</a>
+        <a href="#kuis">Kuis</a>
+      </nav>
+      <button id="tema-btn" class="ikon-btn" type="button" aria-label="Ganti tema">🌙</button>
+      <button id="menu-btn" class="ikon-btn menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Buka menu">☰</button>
+    </div>
+  </header>
+
+  <main id="konten">
+
+    <!-- ===== BERANDA ===== -->
+    <section class="hero" id="beranda">
+      <div class="wrap hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Media Pembelajaran Literasi Digital</p>
+          <h1>Jangan asal sebar.<br><span class="hl">Cek dulu</span> sebelum percaya.</h1>
+          <p class="lead">Kenali jenis-jenis hoax, pelajari ciri-cirinya, lalu asah kemampuanmu lewat bedah pesan, pemindai, permainan detektif, dan kuis.</p>
+          <div class="cta">
+            <a class="btn primary" href="#apa">Mulai Belajar</a>
+            <a class="btn ghost" href="#detektif">Langsung Uji Diri</a>
+          </div>
+          <ul class="hero-stats" aria-label="Isi materi">
+            <li><b data-hitung="jenis">10</b><span>jenis hoax</span></li>
+            <li><b data-hitung="langkah">4</b><span>langkah JEDA</span></li>
+            <li><b data-hitung="kasus">8</b><span>kasus detektif</span></li>
+            <li><b data-hitung="soal">8</b><span>soal kuis</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="phone" id="hero-chat">
+            <div class="phone-bar">
+              <span class="avatar" aria-hidden="true">👥</span>
+              <div><strong>Grup Keluarga Besar</strong><small>38 anggota</small></div>
+            </div>
+            <div class="phone-body">
+              <div class="bubble in">
+                <p>
+                  <span class="m" data-tag="Judul provokatif">🚨 VIRAL!!! Air rebusan daun ajaib sembuhkan semua penyakit!</span>
+                  <span class="m" data-tag="Sumber tidak jelas">Kata dokter di luar negeri,</span>
+                  <span class="m" data-tag="Klaim berlebihan">100% sembuh tanpa obat.</span>
+                  <span class="m" data-tag="Desakan menyebar">Sebarkan ke semua kontak sekarang juga!</span>
+                </p>
+                <small class="jam">12.31</small>
+              </div>
+            </div>
+            <button id="lup-btn" class="btn primary lup" type="button" aria-pressed="false">🔍 Aktifkan kaca pembesar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BAB 1: APA ITU HOAX ===== -->
+    <section class="sec" id="apa">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Bab 1</p>
+          <h2>Apa itu Hoax?</h2>
+          <p>Hoax adalah informasi palsu atau menyesatkan yang dikemas seolah-olah benar, lalu disebarkan agar dipercaya banyak orang. Tidak semua informasi salah dibuat dengan niat jahat. Coba atur sendiri di bawah ini.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card reveal">
+            <h3>Hoax itu bisa berupa…</h3>
+            <ul class="cek">
+              <li>Teks, pesan berantai, atau artikel palsu</li>
+              <li>Foto atau video yang diedit atau salah konteks</li>
+              <li>Suara dan video tiruan buatan AI (deepfake)</li>
+              <li>Tangkapan layar yang dipalsukan</li>
+              <li>Tautan, undian, dan hadiah palsu</li>
+            </ul>
+            <p class="catatan-kecil">Dampaknya nyata: kepanikan, kerugian uang, rusaknya nama baik, bahkan membahayakan kesehatan.</p>
+          </div>
+
+          <div class="card reveal" id="wajah">
+            <h3>Eksperimen: tiga wajah informasi keliru</h3>
+            <fieldset class="seg">
+              <legend>Isi informasinya…</legend>
+              <label><input type="radio" name="isi" value="salah" checked><span>Salah / menyesatkan</span></label>
+              <label><input type="radio" name="isi" value="benar"><span>Benar / akurat</span></label>
+            </fieldset>
+            <fieldset class="seg">
+              <legend>Niat penyebarnya…</legend>
+              <label><input type="radio" name="niat" value="tidak" checked><span>Tidak berniat jahat</span></label>
+              <label><input type="radio" name="niat" value="ya"><span>Sengaja merugikan</span></label>
+            </fieldset>
+            <div id="wajah-hasil" class="wajah-hasil" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <h3 class="sub reveal">Mengapa hoax mudah menyebar? <small>(klik kartu untuk membalik)</small></h3>
+        <div class="grid-4">
+          <button class="flip reveal" type="button" aria-pressed="false">
+            <span class="flip-inner">
+              <span class="face front"><span class="ikon-besar" aria-hidden="true">😱</span><strong>Memancing emosi</strong><small>Ketuk untuk membalik</small></span>
+              <span class="face back"><p>Rasa takut, marah, dan iba membuat kita bertindak cepat: langsung membagikan tanpa berpikir panjang.</p></span>
+            </span>
+          </button>
+          <button class="flip reveal" type="button" aria-pressed="false">
+            <span class="flip-inner">
+              <span class="face front"><span class="ikon-besar" aria-hidden="true">⚡</span><strong>Cepat dan mudah dibagikan</strong><small>Ketuk untuk membalik</small></span>
+              <span class="face back"><p>Satu ketukan cukup untuk meneruskan pesan ke ratusan orang. Klarifikasi biasanya datang jauh lebih lambat.</p></span>
+            </span>
+          </button>
+          <button class="flip reveal" type="button" aria-pressed="false">
+            <span class="flip-inner">
+              <span class="face front"><span class="ikon-besar" aria-hidden="true">🧲</span><strong>Sesuai keyakinan kita</strong><small>Ketuk untuk membalik</small></span>
+              <span class="face back"><p>Kita cenderung percaya kabar yang cocok dengan pendapat sendiri (bias konfirmasi) dan malas memeriksanya.</p></span>
+            </span>
+          </button>
+          <button class="flip reveal" type="button" aria-pressed="false">
+            <span class="flip-inner">
+              <span class="face front"><span class="ikon-besar" aria-hidden="true">👪</span><strong>Datang dari orang dekat</strong><small>Ketuk untuk membalik</small></span>
+              <span class="face back"><p>Kiriman keluarga dan teman terasa tepercaya, padahal mereka pun bisa menjadi korban hoax.</p></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BAB 2: JENIS HOAX ===== -->
+    <section class="sec alt" id="jenis">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Bab 2</p>
+          <h2>Mengenali 10 Jenis Hoax</h2>
+          <p>Pilih satu jenis untuk melihat contoh pesan, ciri-cirinya, dan cara memeriksanya. Semua contoh bersifat fiktif.</p>
+        </div>
+        <div class="jenis-wrap reveal">
+          <div id="jenis-list" class="jenis-list" role="tablist" aria-orientation="vertical" aria-label="Daftar jenis hoax"></div>
+          <div id="jenis-panel" class="card jenis-panel" role="tabpanel" tabindex="0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BAB 3: BEDAH PESAN ===== -->
+    <section class="sec" id="bedah">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Bab 3</p>
+          <h2>Bedah Pesan Hoax</h2>
+          <p>Di pesan berikut tersembunyi <b>6 tanda bahaya</b>. Klik bagian teks yang menurutmu mencurigakan untuk membuka penjelasannya.</p>
+        </div>
+        <div class="bedah-grid">
+          <div class="card reveal">
+            <div class="phone-bar inline-bar"><span class="avatar" aria-hidden="true">📱</span><div><strong>Pesan Terusan</strong><small>Diteruskan berkali-kali</small></div></div>
+            <div id="bedah-pesan" class="bedah-pesan"></div>
+            <div class="bedah-status">
+              <div class="bar" aria-hidden="true"><span id="bedah-bar"></span></div>
+              <p>Ditemukan <b id="bedah-hitung">0</b> dari <b id="bedah-total">6</b> tanda bahaya</p>
+            </div>
+            <div class="aksi">
+              <button id="bedah-semua" class="btn ghost" type="button">Tampilkan semua</button>
+              <button id="bedah-ulang" class="btn ghost" type="button">Ulangi</button>
+            </div>
+          </div>
+          <div id="bedah-info" class="bedah-info reveal" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BAB 4: PEMINDAI ===== -->
+    <section class="sec alt" id="pemindai">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Bab 4</p>
+          <h2>Pemindai Ciri Hoax</h2>
+          <p>Tempelkan pesan yang kamu terima, lalu lihat tanda-tanda bahaya yang terdeteksi. Pemindai ini bekerja di perangkatmu dan tidak mengirim teks ke mana pun.</p>
+        </div>
+        <div class="pindai-grid reveal">
+          <div class="card">
+            <label for="pindai-teks" class="label">Teks pesan</label>
+            <textarea id="pindai-teks" rows="9" placeholder="Tempel pesan WhatsApp, caption, atau judul berita di sini…"></textarea>
+            <div class="aksi">
+              <button id="pindai-btn" class="btn primary" type="button">🔍 Pindai</button>
+              <button id="pindai-hapus" class="btn ghost" type="button">Bersihkan</button>
+            </div>
+            <p class="label kecil">Coba contoh:</p>
+            <div class="chips" id="pindai-contoh"></div>
+          </div>
+          <div class="card" id="pindai-hasil" aria-live="polite"></div>
+        </div>
+        <p class="catatan-kecil reveal">⚠️ Pemindai hanya mendeteksi <i>ciri</i>, bukan memastikan benar atau salah. Pesan tanpa ciri pun tetap perlu diperiksa sumbernya, dan pesan yang punya ciri belum tentu hoax.</p>
+      </div>
+    </section>
+
+    <!-- ===== BAB 5: LANGKAH CEK ===== -->
+    <section class="sec" id="langkah">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Bab 5</p>
+          <h2>Cara Memeriksa: Langkah JEDA</h2>
+          <p>Empat langkah mudah diingat setiap kali menerima kabar yang meragukan.</p>
+        </div>
+        <div class="jeda reveal">
+          <div id="jeda-tabs" class="jeda-tabs" role="tablist" aria-label="Langkah JEDA"></div>
+          <div id="jeda-panel" class="card jeda-panel" role="tabpanel" tabindex="0" aria-live="polite"></div>
+        </div>
+
+        <h3 class="sub reveal">Alat dan sumber untuk cek fakta</h3>
+        <div id="alat-grid" class="grid-3"></div>
+      </div>
+    </section>
+
+    <!-- ===== BAB 6: PERMAINAN DETEKTIF ===== -->
+    <section class="sec alt" id="detektif">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Bab 6</p>
+          <h2>Permainan: Detektif Hoax</h2>
+          <p>Baca setiap pesan, lalu putuskan: <b>hoax</b> atau <b>bukan hoax</b>? Perhatikan petunjuknya, jangan terburu-buru.</p>
+        </div>
+        <div id="game" class="card game reveal"></div>
+      </div>
+    </section>
+
+    <!-- ===== BAB 7: KUIS ===== -->
+    <section class="sec" id="kuis">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Bab 7</p>
+          <h2>Kuis Pemahaman</h2>
+          <p>Uji pemahamanmu dengan 8 soal pilihan ganda. Urutan soal dan jawaban diacak setiap kali bermain.</p>
+        </div>
+        <div id="kuis-root" class="card game reveal"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><b>Detektif Hoax</b> — media pembelajaran literasi digital.</p>
+      <p>Seluruh contoh pesan, tokoh, dan lembaga dalam latihan bersifat fiktif dan dibuat untuk tujuan edukasi. Untuk memeriksa kabar nyata, selalu rujuk sumber resmi dan situs pemeriksa fakta.</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
